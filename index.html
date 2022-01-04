@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dark mode</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body id="body">
+<label class="switch">
+    <span class="slide">
+        <span class="toggle-button"></span>
+    </span>
+    <span class="text">OFF</span>
+</label>
+<script>
+    const toggle = document.querySelector(".toggle-button");
+    const body = document.getElementById("body");
+    const text = document.querySelector(".text");
+    toggle.addEventListener('click', () => {
+        toggle.classList.toggle("active");
+        body.classList.toggle("active");
+        if (toggle.classList.contains("active")) {
+            text.innerHTML = "ON";
+            text.style.left = '78px';
+        } else {
+            text.innerHTML = "OFF";
+        }
+    });
+</script>
+</body>
+</html>
